@@ -16,15 +16,15 @@ module.exports = function (ctx) {
     var plugins = ctx.opts.cordova.plugins;
 
     if (plugins.indexOf("cordova-plugin-file") == -1) {
-        console.log("Adding the cordova-plugin-file@4.3.3... ");
-        var output = execSync(cordovaCLI + ' plugin add cordova-plugin-file@4.3.3').toString();
+        console.log("Adding the cordova-plugin-file@6.0.1... ");
+        var output = execSync(cordovaCLI + ' plugin add cordova-plugin-file@6.0.1').toString();
         console.log(output);
         plugins = execSync('cordova plugin').toString();
     }
 
     if (plugins.indexOf("cordova-plugin-file-transfer") == -1) {
-        console.log("Adding the cordova-plugin-file-transfer@1.6.3... ");
-        var output = execSync(cordovaCLI + ' plugin add cordova-plugin-file-transfer@1.6.3').toString();
+        console.log("Adding the cordova-plugin-file-transfer@1.7.1... ");
+        var output = execSync(cordovaCLI + ' plugin add cordova-plugin-file-transfer@1.7.1').toString();
         console.log(output);
         plugins = execSync('cordova plugin').toString();
     }
