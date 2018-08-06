@@ -12,26 +12,4 @@ module.exports = function (ctx) {
             deferral.reject("An error occured. Please ensure that either the Cordova or PhoneGap CLI is installed.");
         }
     }
-
-    var plugins = ctx.opts.cordova.plugins;
-
-    if (plugins.indexOf("cordova-plugin-file") == -1) {
-        console.log("Adding the cordova-plugin-file@6.0.1... ");
-        var output = execSync(cordovaCLI + ' plugin add cordova-plugin-file@6.0.1').toString();
-        console.log(output);
-        plugins = execSync('cordova plugin').toString();
-    }
-
-    if (plugins.indexOf("cordova-plugin-file-transfer") == -1) {
-        console.log("Adding the cordova-plugin-file-transfer@1.7.1... ");
-        var output = execSync(cordovaCLI + ' plugin add cordova-plugin-file-transfer@1.7.1').toString();
-        console.log(output);
-        plugins = execSync('cordova plugin').toString();
-    }
-
-    if (plugins.indexOf("cordova-plugin-zip") == -1) {
-        console.log("Adding the cordova-plugin-zip@3.1.0... ");
-        var output = execSync(cordovaCLI + ' plugin add cordova-plugin-zip@3.1.0').toString();
-        console.log(output);
-    }
 };
